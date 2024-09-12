@@ -1,0 +1,154 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    page-break-inside: avoid; /* Evita rottura di pagina nel corpo */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    page-break-inside: avoid; /* Evita la rottura all'interno del contenitore */
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    page-break-after: avoid; /* Evita la rottura dopo il titolo */
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    font-family: 'Roboto Mono', monospace;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    page-break-inside: avoid; /* Evita la rottura all'interno del textarea */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    page-break-inside: avoid; /* Evita la rottura all'interno dell'input */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+#previewContainer {
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+#historyContainer {
+    margin-top: 30px;
+    page-break-before: always; /* Forza una nuova pagina prima della cronologia */
+}
+
+.pdf-item {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.2s ease;
+    page-break-inside: avoid; /* Evita la rottura all'interno dell'elemento PDF */
+}
+
+.pdf-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-item-details {
+    flex-grow: 1;
+    overflow: visible; /* Assicura che il contenuto non venga tagliato */
+    word-wrap: break-word; /* Gestisce il testo lungo */
+    word-break: break-all; /* Gestisce il testo lungo */
+    padding: 20px; /* Aggiunge del padding per evitare il troncamento */
+    page-break-inside: avoid; /* Evita la rottura della pagina all'interno dell'elemento */
+}
+
+.pdf-item-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.pdf-item-buttons button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-item-buttons button:hover {
+    background-color: #1e8449;
+}
+
+.pdf-item-buttons button:nth-child(2) {
+    background-color: #e74c3c;
+}
+
+.pdf-item-buttons button:nth-child(2):hover {
+    background-color: #c0392b;
+}

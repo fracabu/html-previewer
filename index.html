@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Previewer con PDF e Invia Email</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Libreria DOMPurify per sanitizzare l'HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.6/purify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script> <!-- SMTPJS per invio email -->
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Previewer con PDF e Invia Email</h1>
+        <textarea id="htmlInput" placeholder="Inserisci il codice HTML"></textarea>
+        <input type="text" id="descriptionInput" placeholder="Inserisci una descrizione del PDF">
+        <div class="button-container">
+            <button id="previewButton">Anteprima</button>
+            <button id="generatePDFButton">Genera PDF</button>
+        </div>
+        <h2>Anteprima:</h2>
+        <div id="previewContainer">
+            <!-- <iframe id="preview"></iframe> -->
+        </div>
+
+        <h2>Storico PDF Generati:</h2>
+        <div id="historyContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
